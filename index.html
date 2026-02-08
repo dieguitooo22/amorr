@@ -1,225 +1,169 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Para vos ❤️</title>
+  <meta charset="UTF-8">
+  <title>Para vos ❤️</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
 
-<style>
-body {
-  margin: 0;
-  padding: 20px;
-  font-family: 'Montserrat', sans-serif;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: white;
-  text-align: center;
-  transition: background-image 1s ease-in-out;
-}
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Montserrat', sans-serif;
+      background-image: url("HEART.gif");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      text-align: center;
+    }
 
-body.day { background-image: url("MINECRAFTDIA.gif"); }
-body.night { background-image: url("MINECRAFTNOCHE.gif"); }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: -1;
+    }
 
-body::before {
-  content:"";
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.6);
-  z-index:-1;
-}
+    h1 { color: #ff4d6d; margin-bottom: 20px; font-family: 'Pacifico', cursive; font-size: 36px; }
+    h2 { color: #ff9ecb; margin-top: 40px; font-size: 28px; }
+    h3 { margin-top: 25px; font-size: 20px; }
 
-h1 { color:#ff4d6d; font-family:'Pacifico',cursive; font-size:40px; }
-h2 { color:#ff9ecb; margin-top:40px; }
-h3 { margin-top:25px; }
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+      max-width: 420px;
+      margin: 10px auto;
+    }
 
-p {
-  max-width:420px;
-  margin:10px auto;
-  line-height:1.6;
-}
+    video, img {
+      width: 90%;
+      max-width: 420px;
+      border-radius: 16px;
+      margin-top: 15px;
+    }
 
-video,img {
-  width:90%;
-  max-width:420px;
-  border-radius:16px;
-  margin-top:15px;
-}
+    button.song {
+      display: block;
+      width: 200px;
+      margin: 10px auto;
+      padding: 10px;
+      border-radius: 12px;
+      border: none;
+      background-color: #ff4d6d;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
 
-button.song {
-  width:200px;
-  padding:10px;
-  margin:10px auto;
-  border:none;
-  border-radius:12px;
-  background:#ff4d6d;
-  color:white;
-  font-weight:600;
-  cursor:pointer;
-}
+    button.song.playing {
+      background-color: #ff85a2;
+    }
 
-#contador { margin-top:10px; }
-
-#yesBtn { transition: transform 0.3s; }
-
-/* Corazones */
-.heart {
-  position: fixed;
-  top: -20px;
-  font-size: 24px;
-  animation: fall 5s linear forwards;
-  pointer-events: none;
-}
-
-@keyframes fall {
-  from { transform: translateY(0); opacity: 1; }
-  to { transform: translateY(100vh); opacity: 0; }
-}
-</style>
+    #contador {
+      font-size: 16px;
+      margin-top: 10px;
+      line-height: 1.8;
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>Te la creisteeee muajajajaj</h1>
+  <h1>UNA PEQUEÑA MUESTRA DE MI GRAN AMOR</h1>
 
-<p>
-hola mi amooor te hice una pagina con el poco conocimiento en programacion q tenia,
-espero q no estes decepcionada pq capaz esperabas algo mas,
-la carta y la cartita tambien las hice con mucho amor aunque te re trolie muajajajajaj.
-</p>
+  <h2>NUESTRO CONTADOR DE AMOR 💖</h2>
+  <div id="contador"></div>
 
-<h2>Nos amamos hace...</h2>
-<div id="contador"></div>
+  <h2>VIDEO 1</h2>
+  <video controls src="EDIT.mp4"></video>
 
-<h2>Videito 1</h2>
-<video controls src="EDIT.mp4"></video>
+  <h2>PAREJAS QUE APARECEN</h2>
 
-<h2>PAREJAS QUE APARECEN</h2>
+  <h3>MIYAMURA Y HORI</h3>
+  <img src="MIYAMURAYHORI.jpg" alt="Miyamura y Hori">
+  <p>tienen una relación hermosa y me hacen acordar mucho a nosotros.</p>
 
-<h3>MIYAMURA Y HORI</h3>
-<img src="MIYAMURAYHORI.jpg">
-<p>tienen una relación hermosa y me hacen acordar mucho a nosotros.</p>
+  <h3>RENTARO Y WAGURI</h3>
+  <img src="RENTAROYWAGURI.png" alt="Rentaro y Waguri">
+  <p>se re descansan pero se aman un montón, literal nosotros.</p>
 
-<h3>RENTARO Y WAGURI</h3>
-<img src="RENTAROYWAGURI.png">
-<p>se re descansan pero se aman un montón, literal nosotros.</p>
+  <h3>KOMI Y TADANO</h3>
+  <img src="KOMIYTADANO.jpg" alt="Komi y Tadano">
+  <p>re tímidos pero con un amor re puro.</p>
 
-<h3>KOMI Y TADANO</h3>
-<img src="KOMIYTADANO.jpg">
-<p>re tímidos pero con un amor re puro.</p>
+  <h3>NARUTO Y HINATA</h3>
+  <img src="NARUTOYHINATA.png" alt="Naruto y Hinata">
+  <p>cómo no ponerlos si somos ellos dos.</p>
 
-<h3>NARUTO Y HINATA</h3>
-<img src="NARUTOYHINATA.png">
-<p>cómo no ponerlos si somos ellos dos.</p>
+  <h3>GOJO Y MARIN</h3>
+  <img src="GOJOUYMARIN.jpg" alt="Gojo y Marin">
+  <p>los elegí a ellos 2 porque los 2 están re lokitos y son tal para cual (como nosotros 2) muajaj.</p>
 
-<h3>GOJO Y MARIN</h3>
-<img src="GOJOUYMARIN.jpg">
-<p>los dos están re lokitos y son tal para cual como nosotros.</p>
+  <h3>CHINATSU Y TAIKI</h3>
+  <img src="BLUEBOX.png" alt="Chinatsu y Taiki">
+  <p>Amor yo los elegí a ellos porque ella siempre lo apoya a él en sus partidos y siempre está ahí para él, igual que vos amor de mi vida hermosa (y próximamente yo también iré a tus partidos muajajaj).</p>
 
-<h3>CHINATSU Y TAIKI</h3>
-<img src="BLUEBOX.png">
-<p>ella siempre lo apoya y siempre está ahí para él, igual que vos conmigo.</p>
+  <h3>SHOUYA Y SHOUKO</h3>
+  <img src="SHOUYAYSHOUKO.png" alt="Shouya y Shouko">
+  <p>y por último la definición de AMOR, a pesar de que empezaron muy mal, terminaron enamorándose de la manera más hermosa posible.</p>
 
-<h3>SHOUYA Y SHOUKO</h3>
-<img src="SHOUYAYSHOUKO.png">
-<p>la definición de amor verdadero.</p>
+  <h2>VIDEO 2</h2>
+  <video controls src="EDIT2.mp4"></video>
 
-<h2>Videito 2</h2>
-<video controls src="EDIT2.mp4"></video>
+  <h2>NOSOTROOOOOOOSSS</h2>
+  <img src="ZAIFOTONORMAL.jpg" alt="Nuestro foto normal">
+  <img src="ZAITRISTE.jpg" alt="Foto triste">
 
-<h2>NOSOTROOOOOOOSSS</h2>
-<img src="ZAIFOTONORMAL.jpg">
-<img src="ZAITRISTE.jpg">
+  <h2>CANCIONES QUE ME HACEN ACORDAR A TI</h2>
+  <button class="song" onclick="playSong(this, 'JAMAS.mp3')">JAMAS</button>
+  <button class="song" onclick="playSong(this, 'MUSEO.mp3')">MUSEO</button>
+  <button class="song" onclick="playSong(this, 'VIVOPORTI.mp3')">VIVO POR TI</button>
+  <button class="song" onclick="playSong(this, 'YOKO.mp3')">YOKO</button>
 
-<h2>CANCIONES QUE ME HACEN ACORDAR A TI</h2>
-<button class="song" onclick="playSong(this,'JAMAS.mp3')">JAMAS</button>
-<button class="song" onclick="playSong(this,'MUSEO.mp3')">MUSEO</button>
-<button class="song" onclick="playSong(this,'VIVOPORTI.mp3')">VIVO POR TI</button>
-<button class="song" onclick="playSong(this,'YOKO.mp3')">YOKO</button>
+  <audio id="player"></audio>
 
-<audio id="player"></audio>
+  <script>
+    const player = document.getElementById('player');
 
-<h2>💍 ¿Quieres pasar toda tu vida junto a mí?</h2>
-<button id="yesBtn" class="song" onclick="yes()">sí 💖</button>
-<button id="noBtn" class="song" onclick="no()">no 😭</button>
-<p id="loveResult"></p>
+    function playSong(button, src) {
+      if(player.src.includes(src) && !player.paused){
+        player.pause();
+        button.classList.remove('playing');
+      } else {
+        const buttons = document.querySelectorAll('button.song');
+        buttons.forEach(b => b.classList.remove('playing'));
+        player.src = src;
+        player.play();
+        button.classList.add('playing');
+      }
+    }
 
-<script>
-const player = document.getElementById("player");
+    const startDate = new Date('2025-09-21T00:00:00');
+    const contador = document.getElementById('contador');
 
-function playSong(btn, src){
-  if(player.src.includes(src) && !player.paused){
-    player.pause();
-  } else {
-    player.src = src;
-    player.play();
-  }
-}
+    function actualizarContador() {
+      const now = new Date();
+      let diff = Math.floor((now - startDate) / 1000);
 
-// CONTADOR
-const startDate = new Date("2025-09-21T00:00:00");
-const contador = document.getElementById("contador");
+      const segundos = diff % 60;
+      diff = Math.floor(diff / 60);
+      const minutos = diff % 60;
+      diff = Math.floor(diff / 60);
+      const horas = diff % 24;
+      const diasTotales = Math.floor(diff / 24);
+      const meses = Math.floor(diasTotales / 30);
+      const dias = diasTotales % 30;
 
-function actualizarContador() {
-  const now = new Date();
-  let diff = Math.floor((now - startDate) / 1000);
+      contador.innerHTML = `${meses} meses 💕 ${dias} días 💕 ${horas} horas 💕 ${segundos} segundos`;
+    }
 
-  const segundos = diff % 60;
-  diff = Math.floor(diff / 60);
-
-  const minutos = diff % 60;
-  diff = Math.floor(diff / 60);
-
-  const horas = diff % 24;
-  diff = Math.floor(diff / 24);
-
-  const dias = diff % 30;
-  const meses = Math.floor(diff / 30);
-
-  contador.innerHTML = `${meses} meses 💕 ${dias} días 💕 ${horas} horas 💕 ${minutos} minutos 💕 ${segundos} segundos`;
-}
-
-setInterval(actualizarContador, 1000);
-actualizarContador();
-
-// FONDO DIA / NOCHE
-function setBackgroundByTime(){
-  const hour = new Date().getHours();
-  document.body.classList.remove("day","night");
-  if(hour >= 7 && hour < 19){
-    document.body.classList.add("day");
-  } else {
-    document.body.classList.add("night");
-  }
-}
-setBackgroundByTime();
-
-// BOTONES
-let size = 1;
-function no(){
-  size += 0.2;
-  document.getElementById("yesBtn").style.transform = `scale(${size})`;
-}
-
-function yes(){
-  document.getElementById("loveResult").innerHTML =
-    "sabía que ibas a decir que sí 😏💍 te amo para siempre";
-
-  // lluvia de corazones
-  for(let i=0;i<40;i++){
-    const heart = document.createElement("div");
-    heart.className = "heart";
-    heart.innerHTML = "❤️";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = (20 + Math.random()*30) + "px";
-    heart.style.animationDuration = (3 + Math.random()*3) + "s";
-    document.body.appendChild(heart);
-
-    setTimeout(()=>heart.remove(),6000);
-  }
-}
-</script>
+    setInterval(actualizarContador, 1000);
+    actualizarContador();
+  </script>
 
 </body>
 </html>
